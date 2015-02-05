@@ -1,0 +1,102 @@
+/*-------------------------------------------------------
+    CSS FOR DASHBOARD
+*/
+.dashboard{
+    float: left;
+    border: #CCC 1px solid;
+    width: 99%;
+    background: #FFF;
+}
+
+.dashboard .left{width: 50%; float: left;}
+.dashboard .right{width: 50%; float: right; }
+.avera{width: 100%; height: 40px; font-size: 24px ;position: absolute; top: 50%; left: 0; margin-top: -20px; line-height:19px; text-align: center; z-index: 999999999999999}
+
+.title-seo {
+    font-weight: bold;
+}
+
+.load {
+    height: 20px;
+    background: #4a8ace;  
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.noload {
+    float: right;
+    width: 60%;
+    background: #cecfce;  
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #eee;    
+    position: relative;
+    margin-top: -22px;
+}
+
+.loadtext {
+    font-family: Consolas;    
+    font-size: 14px;
+    color: #FFF;
+    padding-left: 3px;
+    position: absolute;
+    bottom: 1px;
+    left: 40%;       
+}
+
+.dashboard h1 {
+    padding: 10px 0px 10px 20px
+}
+
+.dashboard-left {
+    margin: 10px;
+    min-height:580px;    
+    background: #eff3f7;
+    padding-bottom: 10px;   
+}
+
+#canvas-holder{
+    margin:50px 0 0 0;
+    width:100%;
+}
+#chart-container {
+    margin: 10px 10px 0 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#canvas-holder h2 {
+    text-align: center;
+}
+
+.dashboard-right {
+    padding-bottom: 10px;
+    margin-top: 10px;
+    position: relative;        
+}
+#wpmetaseo-update-version {
+    bottom: 0;
+    width: 90% ;
+    position: absolute;
+}
+#alexa-ranking{
+	float:left;
+	margin-left:30px;
+    margin-top: 30px;
+}
+#wpmetaseo-update-version {
+	background: none repeat scroll 0 0 #eff3f7;
+	padding:20px;
+}
+#wpmetaseo-update-version h4 {
+	margin:0;
+}
+#wpmetaseo-update-version ul {
+	margin-bottom:0;
+}
+
+header{
+    width: 90%;
+    margin: 0px auto;
+    padding: 30px 10px 10px 20px;
+}
