@@ -293,7 +293,9 @@ class MetaSeo_Content_List_Table extends WP_List_Table {
                             break;
 
                         case 'col_title':
-                            echo sprintf('<td %2$s><div class="action-wrapper"><strong id="post-title-'.$rec->ID.'">%1$s</strong>', stripslashes($rec->post_title), $attributes);
+                            $post_title = stripslashes($rec->post_title);
+                            if($post_title == '') $post_title = __('(no title)' , 'wp-meta-seo');
+                            echo sprintf('<td %2$s><div class="action-wrapper"><strong id="post-title-'.$rec->ID.'">%1$s</strong>', $post_title, $attributes);
                             
                             $post_type_object = get_post_type_object($rec->post_type);
                             $can_edit_post = current_user_can($post_type_object->cap->edit_post, $rec->ID);
