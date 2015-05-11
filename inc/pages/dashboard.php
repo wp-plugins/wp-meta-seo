@@ -74,8 +74,16 @@ $dashboard = new MetaSeo_Dashboard();
             optimizationChecking(updateChart);
             var height_left = jQuery("#dashboard-left").height();
             jQuery(".dashboard-right").css('height',height_left);
+            replace_url_img();
         });
         
+        function replace_url_img(){
+            var url = '<?php echo WPMETASEO_PLUGIN_URL; ?>';
+            var icon_tip = url + 'img/icon_tip.png';
+            var globe_sm = url + 'img/globe-sm.jpg';
+            jQuery('.img-inline').attr('src',globe_sm);
+            jQuery('#alexa-ranking .tt img').attr('src',icon_tip);
+        }
                    
         function updateChart(response) {
          //   console.log(response);

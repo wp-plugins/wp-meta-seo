@@ -73,6 +73,7 @@ Once the plugin is installed, just load the main plugin view to configure all me
 
 * 1.0.0 Initial (free) release
 * 1.0.1
+* 1.0.2
 
 == Changelog ==
 
@@ -83,6 +84,10 @@ Once the plugin is installed, just load the main plugin view to configure all me
 = 1.0.1 =
 
 * display (no title) in column title if post is no titled
+
+= 1.0.2 =
+
+* Fix filter broken and icons broken
 
 == Upgrade Notice ==
 

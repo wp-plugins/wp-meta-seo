@@ -381,7 +381,7 @@ class MetaSeo_Content_List_Table extends WP_List_Table {
         $current_url = set_url_scheme('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 		$redirect = false;
 		
-        if (isset($_POST['do_filter']) and $_POST['do_filter'] === 'Filter') {
+        if (isset($_POST['do_filter']) and $_POST['do_filter'] === __('Filter')) {
             $current_url = add_query_arg(array( "post_type_filter" => $_POST['post_type_filter']), $current_url);
 			$redirect = true;
         }

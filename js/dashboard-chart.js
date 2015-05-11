@@ -9,12 +9,10 @@ function optimizationChecking(call_back) {
         beforeSend: function() {
         },
         success: function(response) {
-            console.log(response);
             ret = response;
             for (sid in response) {
                 jQuery('#' + sid).removeClass('hz-loading').text(response[sid][0] + '/' + response[sid][1]);
             }
-            console.log(typeof (call_back));
             if (typeof (call_back) == "function") {
                 call_back(response);
             }
@@ -70,7 +68,6 @@ function drawChart(metacontent,notmetacontent, imagemeta,notimagemeta, imageopti
 
     ];
 
-    console.log(doughnutData);
         var ctx = document.getElementById("chart-area").getContext("2d");
         window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
             responsive: true,
