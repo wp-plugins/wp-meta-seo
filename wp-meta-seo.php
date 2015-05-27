@@ -4,7 +4,7 @@
  * Plugin Name: WP Meta SEO
  * Plugin URI: http://www.joomunited.com/wordpress-products/wp-meta-seo
  * Description: WP Meta SEO is a plugin for WordPress to fill meta for content, images and main SEO info in a single view.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: JoomUnited
  * Author URI: http://www.joomunited.com
  * License: GPL2
@@ -75,26 +75,28 @@ if (is_admin()) {
 	  // modify buffer here, and then return the updated code
 	  global $wp_query;
 	  $meta_title = get_post_meta($wp_query->post->ID, '_metaseo_metatitle', true);
+          $meta_title_esc = esc_attr($meta_title_esc);
 	  $meta_description = get_post_meta($wp_query->post->ID, '_metaseo_metadesc', true);
+          $meta_description_esc = esc_attr($meta_description);
 	  $patterns = array(
 	  		'_title' => array('#<title>[^<>]+?<\/title>#i', '<title>'.$meta_title.'</title>',
 							($meta_title != '' ? true : false) ),
 	  		'title' => array(
 	  			'#<meta name="title" [^<>]+ ?>#i',
-	  			'<meta name="title" content="'. $meta_title .'" />',
-	  			($meta_title != '' ? true : false) ),
+	  			'<meta name="title" content="'. $meta_title_esc .'" />',
+	  			($meta_title_esc != '' ? true : false) ),
 	 'description' => array(
 	 			'#<meta name="description" [^<>]+ ?>#i',
-	 			'<meta name="description" content="'. $meta_description .'" />',
-	 			($meta_description != '' ? true : false) ),
+	 			'<meta name="description" content="'. $meta_description_esc .'" />',
+	 			($meta_description_esc != '' ? true : false) ),
 	  'og:title' => array(
 	  			'#<meta property="og:title" [^<>]+ ?>#i',
-	  			'<meta name="og:title" content="'. $meta_title .'" />',
-	  			($meta_title != '' ? true : false) ),
+	  			'<meta name="og:title" content="'. $meta_title_esc .'" />',
+	  			($meta_title_esc != '' ? true : false) ),
 	'og:description' => array(
 				'#<meta property="og:description" [^<>]+ ?>#i',
-				'<meta name="og:description" content="'. $meta_description .'" />',
-				($meta_description != '' ? true : false) )
+				'<meta name="og:description" content="'. $meta_description_esc .'" />',
+				($meta_description_esc != '' ? true : false) )
 	  );
 	  
 	  //

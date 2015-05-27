@@ -74,6 +74,7 @@ Once the plugin is installed, just load the main plugin view to configure all me
 * 1.0.0 Initial (free) release
 * 1.0.1
 * 1.0.2
+* 1.0.3
 
 == Changelog ==
 
@@ -88,6 +89,7 @@ Once the plugin is installed, just load the main plugin view to configure all me
 = 1.0.2 =
 
 * Fix filter broken and icons broken
+= 1.0.3 =
 
 == Upgrade Notice ==
 
