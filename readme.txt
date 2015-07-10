@@ -3,7 +3,7 @@ Contributors: JoomUnited
 Tags:  bing, description, google, google webmaster tools, keywords, meta, meta description, meta keywords, robots meta, search engine optimization, seo, Webmaster Tools, wordpress seo, yahoo, image optimization, image resize, photo, custom post, post, posts, page
 Requires at least: 4.0
 Tested up to: 4.2.1
-Stable tag: trunk
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
