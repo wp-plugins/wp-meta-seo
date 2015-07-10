@@ -548,8 +548,10 @@ class MetaSeo_Image_List_Table extends WP_List_Table {
 			$_sizes = array();
 			foreach($metaseo_imgs_sizes as $metaseo_img_sizes){
 				$metaseo_img_sizes = @unserialize($metaseo_img_sizes->meta_value);
-				foreach($metaseo_img_sizes as $key => $size){
-					add_image_size($key, $size['width'], $size['height'], false);
+				if(!empty($metaseo_img_sizes)){
+					foreach($metaseo_img_sizes as $key => $size){
+						add_image_size($key, $size['width'], $size['height'], false);
+					}
 				}
 			}
 			
